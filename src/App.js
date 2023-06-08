@@ -1,11 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './ui/layouts/Header/Header';
+// import Banner from './ui/components/Banner/Banner';
+// import TrackList from './ui/layouts/Tracklist/Tracklist';
+// import Footer from './ui/layouts/Footer/Footer';
+import React, { useState } from 'react';
 
 function App() {
+  const [ search, setSearch]= useState("Welcome");
+
+  function handleSearch(data) {
+    setSearch(data);
+  }
+
   return (
-    <div className="App">
-      
-    </div>
+    <main>
+      <Header onSearch={handleSearch} search={search} />
+      {/* <Banner /> */}  
+      {/* <TrackList /> */}
+      {/* <Footer /> */}
+    </main>
   );
 }
 
