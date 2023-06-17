@@ -1,12 +1,19 @@
 import React from "react";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import Logo from "../components/Logo";
+import SearchBar from "../components/SearchBar";
+import FilterButton from "../components/FilterButton";
+import Login from "../components/Login";
 
 function Header(props) {
     return (
-        <div>
-            <h1>Trackist</h1>
-            <SearchBar dataSearch={props.onSearch} searchValue={props.search}/>
-        </div>
+        <header className="flex justify-between items-center">
+            <Logo />
+            <div className="flex gap-4 w-1/2">
+                <SearchBar dataSearch={props.onSearch} searchValue={props.search} />
+                <FilterButton />
+            </div>
+            <Login />
+        </header>
     );
 }
 

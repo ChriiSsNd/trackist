@@ -1,5 +1,4 @@
-import './App.css';
-import Header from './ui/layouts/Header/Header';
+import Header from './ui/layouts/Header';
 // import Banner from './ui/components/Banner/Banner';
 // import TrackList from './ui/layouts/Tracklist/Tracklist';
 // import Footer from './ui/layouts/Footer/Footer';
