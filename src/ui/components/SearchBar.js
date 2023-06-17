@@ -1,27 +1,25 @@
 import React from "react";
-
-import './SearchBar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 
 const data = {
-    type: "search",
-    placeholder: "Search",
+    type: "text",
+    placeholder: "Search favorite music",
+    maxLength: "68",
 }
 
 function SearchBar(props) {
-    function clickHandler(event) {
-        const val = event.target.previousSibling.value;
-        props.dataSearch(val);
-    }
 
     return (
-        <div>
-            <h2>{props.searchValue}</h2>
-            <form action="#">
+        <div className="w-full bg-white">
+            <form action="#" className="shadow-md rounded-md px-4 py-2 border border-gray-100 h-10 flex">
+                <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" className="text-gray-400 mr-2 align-middle" />
                 <input
                     type={data.type}
+                    maxLength={data.maxLength}
                     placeholder={data.placeholder}
+                    className="w-full bg-transparent outline-none placeholder:text-sm placeholder:italic placeholder:font-normal text-gray-600 font-medium caret-gray-600"
                 />
-                <button onClick={clickHandler}>search</button>
             </form>
         </div>
     );
